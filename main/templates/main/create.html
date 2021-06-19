@@ -1,0 +1,28 @@
+{%extends 'main/base.html'%}
+
+{%block title%}
+Создать задачу
+{%endblock%}
+
+{%block content%}
+    <h1>Создать заметку<h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.title}}<br>
+        {{form.task}}<br>
+        <button type= "submit" class="btn btn-success">Добавить заметку</button>
+        <span>{{error}}</span>
+    </form>
+{%endblock%}
+
+{% block color %}
+text-white
+{% endblock %}
+
+{% block color2 %}
+text-white
+{% endblock %}
+
+{% block color3 %}
+text-secondary
+{% endblock %}
